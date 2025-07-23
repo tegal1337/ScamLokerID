@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "platform",
+    "username",
+    "category",
+    "status",
+    "evidence"
+  ],
+  "properties": {
+    "platform": {
+      "type": "string",
+      "enum": [
+        "instagram",
+        "tiktok",
+        "facebook",
+        "telegram"
+      ]
+    },
+    "username": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "reported_by": {
+      "type": "string"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "taken_down",
+        "unknown"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
